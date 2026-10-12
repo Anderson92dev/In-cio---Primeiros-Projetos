@@ -1,15 +1,20 @@
-let base = 3;
-let expoente = 3;
+let base = 10;
+let expoente = 1;
 
 function potenciacao(base, expoente){
     let acumulador = 1;
-    if(expoente === 1){
-        acumulador = base * 1;
-        return console.log(acumulador);
-    } else {
         for(let i = 1; i <= expoente; i++){
             acumulador = acumulador * base;
         }
+    console.log(acumulador);
+}
+
+function potencia(base, expoente){
+    let acumulador = 1;
+    let i = 1;
+    while(i <= expoente){
+        acumulador = acumulador * base;
+        i++;
     }
     console.log(acumulador);
 }
