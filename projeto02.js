@@ -8,7 +8,6 @@ const exibir = document.querySelector("#exibir");
 
 //programa
 function definirTipoTriangulo(ladoA, ladoB, ladoC){
-    let resultado;
     if(ladoA === ladoB && ladoA === ladoC && ladoB === ladoC){
         return `Triângulo é equilátero...`;
     } else if(ladoA !== ladoB && ladoA !== ladoC && ladoB !== ladoC){
@@ -21,9 +20,7 @@ function definirTipoTriangulo(ladoA, ladoB, ladoC){
 function verificarCondicao(a, b, c, funcao){
     if((a + b) > c && (a + c) > b && (c + b) > a){
         return funcao(a, b, c);
-    } else {
-        return `NÃO é triângulo`;
-    }
+    } return `NÃO é triângulo`;
 }
 
 //executar
