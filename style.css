@@ -1,31 +1,74 @@
 
+/* 1. Facilita o controle das dimensões dos elementos */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Área principal da calculadora */
 body {
     font-family: Arial, sans-serif;
+
+    width: calc(100% - 2rem);
     max-width: 400px;
-    margin: 40px auto;
-    padding: 20px;
+
+    margin: 2rem auto;
+    padding: 1.25rem;
+
     border: 1px solid black;
 }
 
+/* 3. Título adaptável */
+h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+/* 4. Rótulos dos campos */
 label {
     display: block;
     margin-top: 15px;
 }
 
+/* 5. Campos de entrada */
 input {
-    box-sizing: border-box;
+    display: block;
     width: 100%;
+    max-width: 100%;
+
     padding: 8px;
     margin-top: 5px;
+
+    font: inherit;
 }
 
+/* 6. Botão */
 button {
     margin-top: 20px;
     padding: 10px 16px;
+    min-height: 44px;
+
+    font: inherit;
     cursor: pointer;
 }
 
+/* 7. Resultado do cálculo */
 #resultado {
     margin-top: 20px;
     white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+/* 8. Ajustes para telas pequenas */
+@media (max-width: 480px) {
+    body {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    button {
+        width: 100%;
+    }
 }
