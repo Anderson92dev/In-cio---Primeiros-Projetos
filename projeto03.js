@@ -1,5 +1,9 @@
-let base = 10;
-let expoente = 1;
+let base = 2;
+let expoente = 3;
+
+function potencializar(base, expoente){
+    console.log(base ** expoente)
+}
 
 function potenciacao(base, expoente){
     let acumulador = 1;
@@ -19,4 +23,4 @@ function potencia(base, expoente){
     console.log(acumulador);
 }
 
-potenciacao(base, expoente);
+potencializar(base, expoente);
