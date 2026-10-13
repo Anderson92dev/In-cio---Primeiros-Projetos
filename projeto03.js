@@ -29,10 +29,17 @@ botao.addEventListener("click", function(){
     const n1 = Number(base.value.trim());
     const n2 = Number(expoente.value.trim());
 
+    //validação
+    if (base.value.trim() === '' || expoente.value.trim() === '') {
+    resultado.textContent = 'Preencha os dois campos!';
+    return;
+}
+    //validação
     if(!Number.isFinite(n1) || !Number.isFinite(n2) || n2 < 0){
         return resultado.textContent = `Valores inválidos!`;
     }
 
+    //execução
     resultado.innerHTML = potencializar(n1, n2);
 })
 
