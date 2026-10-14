@@ -6,9 +6,9 @@ e o resto da divisão destes dois valores.
 const resultado = Math.trunc(dividendo / divisor); => exibe o quociente inteiro.
 */
 
-const dividendo = document.querySelector("#valor1");
-const divisor = document.querySelector("#valor2");
-const botao = document.querySelector("#botao");
+const dividendo = document.querySelector("#dividendo");
+const divisor = document.querySelector("#divisor");
+const botao = document.querySelector("#calcular");
 const resultado = document.querySelector("#resultado");
 
 function divisao(a, b){
@@ -18,12 +18,23 @@ function divisao(a, b){
     return `O resultado é ${quociente} e resto ${resto}`;
 }
 
-console.log("ameixa")
 
-/* botao.addEventListener("click", function(){
+botao.addEventListener("click", function(){
+      //validação
+    if (dividendo.value.trim() === '' || divisor.value.trim() === '') {
+    resultado.textContent = 'Preencha os dois campos!';
+    return;
+    }
+
     const valor1 = Number(dividendo.value.trim());
     const valor2 = Number(divisor.value.trim());
 
-    resultado.textContent = `funcionando...`;
+    //validação
+    if(!Number.isFinite(valor1) || !Number.isFinite(valor2) || valor2 === 0){
+        resultado.textContent = `Valores inválidos!`;
+        return;
+    }
 
-}); */
+    resultado.textContent = divisao(valor1, valor2);
+
+});
