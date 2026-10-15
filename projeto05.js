@@ -10,6 +10,7 @@ Desenvolva uma função JavaScript para que ela receba um valor como 0.300000000
 
 Opções:
     variavel.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'}) => formata valor direto pra Real(tipo string)
+    
     Number(variavel.toFixed(2)) => .toFixed(2) formata valor para duas casas decimais e Number() converte para tipo npumero.
 */
 
