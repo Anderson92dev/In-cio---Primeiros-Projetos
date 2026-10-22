@@ -78,7 +78,7 @@ function calcular(codigo, quantidade){
             return `Seu ${produto} custa R$ ${total}`; 
         
         default:
-            `Valor Inválido...`;
+            return `Valor Inválido...`;
     }
 }
 
