@@ -1,20 +1,18 @@
 
 
 function retirarVogais(palavra){
-    const vogais = ["a","A","e","E","i","I","o","O","u","U"];
-    const lista = palavra.split("");
-
-    for(let indice = 0; indice < lista.legth; indice++){
-        for(let indice = 0; indice < vogais.legth; indice++){
-             if(lista[i] === vogais[i]){
-                delete lista[i];
-             }
-        }
-        
-    }
-
-    console.log(lista.flat())
-    
+    const resultado = palavra.replace(/[aeiou]/gi, "");
+    console.log(resultado);
 }
 
 retirarVogais("Cod3r");
+
+/* 
+[aeiou] — identifica qualquer vogal.
+
+g — substitui todas as ocorrências, não apenas a primeira.
+
+i — ignora a diferença entre maiúsculas e minúsculas.
+
+"" — substitui as vogais por nada, removendo-as. 
+*/
